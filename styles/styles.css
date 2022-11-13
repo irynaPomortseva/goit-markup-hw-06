@@ -457,6 +457,7 @@ img {
     display: flex;
     align-items: center;
     align-items: baseline;
+    justify-content: space-between;
 }
 
 .footer-logo {
@@ -477,7 +478,6 @@ img {
     line-height: 1.7;
     letter-spacing: 0.03em;
     color: var(--address-link);
-    margin-right: 94px;
 }
 
 .footer-map-link {
@@ -526,6 +526,67 @@ img {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* РОЗСИЛКА В ФУТЕРІ */
+
+.mailing-footer {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--address-list-color);
+}
+
+.mailing {
+    margin-top: 20px;
+}
+
+.mailing-form {
+    display: flex;
+    align-items: center;
+}
+
+.email-footer{
+    min-width: 360px;
+    background-color: #2F303A;
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    margin-right: 12px;
+    padding: 15px 16px;
+}
+
+.email-footer:focus {
+    outline: none;
+}
+
+.mailing-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: var(--address-list-color);
+    background:var(--accent-color);
+    cursor: pointer;
+    border: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding: 10px 28px;
+}
+
+.mailing-button:hover,
+.mailing-button:focus {
+    background: var(--hover-btn-color);
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mailing-icon {
+    margin-left: 10px;
+}
 
 /* Portfolio */
 .line {
@@ -672,6 +733,7 @@ img {
     background: var(--address-list-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    padding: 40px;
 }
 
 .modal-btn {
@@ -695,6 +757,11 @@ img {
 
 .modal-close-btn {
     fill: var(--nav-list-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover .modal-close-btn {
+    fill: #2196F3;
 }
 
 /* Ховер на Портфолио карточки */
@@ -741,4 +808,170 @@ img {
 .projects-item:hover .projects-overlay-item {
     transform: translateY(-100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* Меню модалки*/
+
+.contact-form{
+    height: 100%;
+}
+
+.contact-form-join-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.modal-join-us {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+}
+
+.contact-form-field {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: var(--secondary-text-color);
+}
+
+.contact-form-input{
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.contact-form-input:focus + .contact-form-icon {
+    fill: var(--accent-color);
+}
+
+.contact-form-input-wrapper{
+    position: relative;
+    display: block;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+.contact-form-icon {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-message{
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    height: 120px;
+    padding: 12px 16px;
+    margin-top: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    resize: none;
+}
+.contact-form-message::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.contact-form-message:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.contact-form-checkbox-wrapper {
+    margin-bottom: 30px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.contact-form-checkbox-label {
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+    text-align: center;
+}
+
+.contact-form-policy {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+    margin-left: 7px;
+}
+
+.contact-form-submit-btn {
+    min-width: 200px;
+    padding: 10px 52px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    color: var(--address-list-color);
+    background:var(--accent-color);
+    cursor: pointer;
+    border: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.submit-btn {
+    position: absolute;
+    left: 50%;
+    margin-top: 30px;
+    transform: translate(-50%, -50%);
+}
+
+.contact-form-submit-btn:hover,
+.contact-form-submit-btn:focus {
+    background: var(--hover-btn-color);
+    transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border-radius: 2px;
+    border: 2px solid #212121;
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form-checkbox:checked + .checkbox {
+    border-color:  var(--accent-color);
+    background-color: var(--accent-color);
+    background-image: url(../img/icon-check.svg);
+    background-origin: border-box;
+    background-size: contain;
 }
