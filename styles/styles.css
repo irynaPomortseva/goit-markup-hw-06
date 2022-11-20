@@ -537,13 +537,10 @@ img {
     color: var(--address-list-color);
 }
 
-.mailing {
-    margin-top: 20px;
-}
-
 .mailing-form {
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 
 .email-footer{
@@ -727,7 +724,6 @@ img {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    height: 581px;
     width: 528px;
 
     background: var(--address-list-color);
@@ -760,8 +756,12 @@ img {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-btn:focus .modal-close-btn {
+    fill: var(--accent-color);
+}
+
 .modal-btn:hover .modal-close-btn {
-    fill: #2196F3;
+    fill: var(--accent-color);
 }
 
 /* Ховер на Портфолио карточки */
@@ -840,6 +840,7 @@ img {
     line-height: 14px;
     letter-spacing: 0.01em;
     color: var(--secondary-text-color);
+    margin-bottom: 10px;
 }
 
 .contact-form-input{
@@ -864,7 +865,6 @@ img {
     position: relative;
     display: block;
     margin-top: 4px;
-    margin-bottom: 10px;
 }
 
 .contact-form-icon {
@@ -939,11 +939,10 @@ img {
     border-radius: 4px;
 }
 
-.submit-btn {
-    position: absolute;
-    left: 50%;
-    margin-top: 30px;
-    transform: translate(-50%, -50%);
+.contact-form-submit-btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-form-submit-btn:hover,
@@ -957,7 +956,7 @@ img {
     width: 16px;
     height: 15px;
     border-radius: 2px;
-    border: 2px solid #212121;
+    border: 2px solid var(--primary-text-color);
     cursor: pointer;
     margin-right: 7px;
 }
@@ -974,4 +973,9 @@ img {
     background-image: url(../img/icon-check.svg);
     background-origin: border-box;
     background-size: contain;
+}
+
+.contact-form-checkbox:focus +.checkbox {
+    border: 2px solid var(--accent-color);
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
